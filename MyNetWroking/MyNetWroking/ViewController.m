@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RequestNetWork.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    RequestNetWork *req = [RequestNetWork new];
+    NSString *urlStr = @"http://m.lanlingfuli.com/aif/home/getRecomm";
+    NSDictionary *postDic = @{@"agency":@"ios",
+                              @"pageIndex":@"1"};
+    NSString *token = @"11111111";
+    [req reqUrl:urlStr post:postDic token:token suceess:^(id obj) {
+        NSLog(@"请求成功：%@",obj);
+    } fail:^(NSString *errorStr, NSInteger errorCode) {
+        NSLog(@"请求失败：%@",errorStr);
+    }];
 }
 
 
