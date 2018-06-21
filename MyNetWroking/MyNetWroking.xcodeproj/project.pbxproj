@@ -16,6 +16,7 @@
 		56D171B020DA4C3C0084CDE1 /* MyNetWrokingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D171AF20DA4C3C0084CDE1 /* MyNetWrokingTests.m */; };
 		56D171BB20DA4C3C0084CDE1 /* MyNetWrokingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D171BA20DA4C3C0084CDE1 /* MyNetWrokingUITests.m */; };
 		56D171CE20DA615A0084CDE1 /* RequestNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D171CD20DA615A0084CDE1 /* RequestNetWork.m */; };
+		56D171D120DA8F900084CDE1 /* FileNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D171D020DA8F900084CDE1 /* FileNetWork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		56D171BC20DA4C3C0084CDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D171CC20DA615A0084CDE1 /* RequestNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestNetWork.h; sourceTree = "<group>"; };
 		56D171CD20DA615A0084CDE1 /* RequestNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestNetWork.m; sourceTree = "<group>"; };
+		56D171CF20DA8F900084CDE1 /* FileNetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileNetWork.h; sourceTree = "<group>"; };
+		56D171D020DA8F900084CDE1 /* FileNetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileNetWork.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 			children = (
 				56D171CC20DA615A0084CDE1 /* RequestNetWork.h */,
 				56D171CD20DA615A0084CDE1 /* RequestNetWork.m */,
+				56D171CF20DA8F900084CDE1 /* FileNetWork.h */,
+				56D171D020DA8F900084CDE1 /* FileNetWork.m */,
 			);
 			path = NetWroking;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			files = (
 				56D1719B20DA4C370084CDE1 /* ViewController.m in Sources */,
 				56D171A620DA4C3C0084CDE1 /* main.m in Sources */,
+				56D171D120DA8F900084CDE1 /* FileNetWork.m in Sources */,
 				56D171CE20DA615A0084CDE1 /* RequestNetWork.m in Sources */,
 				56D1719820DA4C370084CDE1 /* AppDelegate.m in Sources */,
 			);

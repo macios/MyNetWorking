@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,81 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELX-Fi-ybE">
+                                <rect key="frame" x="51" y="394" width="31" height="30"/>
+                                <state key="normal" title="下载"/>
+                                <connections>
+                                    <action selector="downClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2u-Us-HuL"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EX8-Ye-rRY">
+                                <rect key="frame" x="15" y="342.5" width="345" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ch9-ok-tOa">
+                                <rect key="frame" x="135" y="394" width="31" height="30"/>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pauseClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fnV-P6-2wV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsF-Id-hZS">
+                                <rect key="frame" x="35" y="451" width="62" height="30"/>
+                                <state key="normal" title="后台下载"/>
+                                <connections>
+                                    <action selector="backDownClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rrb-gE-MRb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBy-Xh-EUq">
+                                <rect key="frame" x="135" y="451" width="31" height="30"/>
+                                <state key="normal" title="取消"/>
+                                <connections>
+                                    <action selector="cancelBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXt-Xb-mhy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7Z-Ts-5UJ">
+                                <rect key="frame" x="91" y="292" width="193" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="ANI-yz-cyt"/>
+                                    <constraint firstAttribute="height" constant="21" id="ZHS-fh-pAJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bsF-Id-hZS" firstAttribute="top" secondItem="ELX-Fi-ybE" secondAttribute="bottom" constant="27" id="5SO-7Y-i63"/>
+                            <constraint firstItem="nBy-Xh-EUq" firstAttribute="centerX" secondItem="Ch9-ok-tOa" secondAttribute="centerX" id="DdU-VY-dWF"/>
+                            <constraint firstItem="bsF-Id-hZS" firstAttribute="centerX" secondItem="ELX-Fi-ybE" secondAttribute="centerX" id="IDx-aS-cHQ"/>
+                            <constraint firstItem="nBy-Xh-EUq" firstAttribute="centerY" secondItem="bsF-Id-hZS" secondAttribute="centerY" id="Mhc-0D-4pD"/>
+                            <constraint firstItem="Ch9-ok-tOa" firstAttribute="leading" secondItem="ELX-Fi-ybE" secondAttribute="trailing" constant="53" id="SGe-Dw-V1r"/>
+                            <constraint firstItem="EX8-Ye-rRY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="XWz-dJ-pbn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EX8-Ye-rRY" secondAttribute="trailing" constant="15" id="jvb-Sm-Gvl"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ch9-ok-tOa" secondAttribute="trailing" constant="20" symbolic="YES" id="kvk-Uu-KBm"/>
+                            <constraint firstItem="EX8-Ye-rRY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="muI-TC-Kvw"/>
+                            <constraint firstItem="ELX-Fi-ybE" firstAttribute="top" secondItem="EX8-Ye-rRY" secondAttribute="bottom" constant="49.5" id="nuI-Q0-IXN"/>
+                            <constraint firstItem="n7Z-Ts-5UJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sCX-8M-buI"/>
+                            <constraint firstItem="ELX-Fi-ybE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="thI-60-SI6"/>
+                            <constraint firstItem="Ch9-ok-tOa" firstAttribute="centerY" secondItem="ELX-Fi-ybE" secondAttribute="centerY" id="vmb-36-K3g"/>
+                            <constraint firstItem="EX8-Ye-rRY" firstAttribute="top" secondItem="n7Z-Ts-5UJ" secondAttribute="bottom" constant="29.5" id="x2u-IN-Nud"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pauseBtn" destination="Ch9-ok-tOa" id="wMF-uH-UVv"/>
+                        <outlet property="proLabel" destination="n7Z-Ts-5UJ" id="Fjv-i6-NAa"/>
+                        <outlet property="progressView" destination="EX8-Ye-rRY" id="9hg-KT-58Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="90.404797601199405"/>
         </scene>
     </scenes>
 </document>
